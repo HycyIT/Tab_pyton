@@ -1,17 +1,40 @@
-lista_gosci1 = {
-                    ('Andrzej i Teresa'),
-                    ('Krystyna i Andrzej'),
-                    ('Józef i Gabriela'),
-                    ('Małgorzata i Jacek'),
-                    ('Stanisława i Stanisław')
-            }
-lista_gosci2 = {
-                    ('Arkadiusz i Sylwia'),
-                    ('Piotr i Marzena'),
-                    ('Rafał i Malwina'),
-                    ('Kamil i Wiola'),
-                    ('Damian i Anna')
-                }
+definitions = {}
 
-lista_gosci_all = lista_gosci1 | lista_gosci2
-print(lista_gosci_all)
+while True:
+    print("Wybierz '1', aby dodać nową definicję")
+    print("Wybierz '2', aby wyszukać definicję")
+    print("Wybierz '3', aby usunąć definicję")
+    print("Wybierz '4', aby pokazać słownik")
+    print("Wybierz '5', aby zakończyć")
+
+    try:
+        num = int(input("Witaj, co chcesz zrobić: "))
+        
+        if 1 <= num <= 5:
+            if num == 1:
+                title = input("Czego ma dotyczyć? : ")
+                definition = input("Podaj definicję: ") 
+                definitions[title] = definition
+                print("Definicja dodana pomyślnie.")
+            elif num == 2:
+                title = input("Wyszukaj po ID: ")
+                if title in definitions:
+                    print(definitions[title])
+                else:
+                    print("Nie ma takiej definicji.")
+            elif num == 3:
+                title = input("Podaj ID, które chcesz usunąć: ")
+                if title in definitions:
+                    del definitions[title]
+                    print("Definicja usunięta pomyślnie.")
+                else:
+                    print("Nie ma takiej definicji.")
+            elif num == 4:
+                print(definitions)
+            elif num == 5:
+                print("Pa")
+                break
+        else:
+            print("Podaj poprawny kod menu.")
+    except ValueError:
+        print("Błąd! Wprowadź poprawną wartość.")
