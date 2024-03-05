@@ -1,40 +1,39 @@
 definitions = {}
 
-while True:
-    print("Wybierz '1', aby dodać nową definicję")
-    print("Wybierz '2', aby wyszukać definicję")
-    print("Wybierz '3', aby usunąć definicję")
-    print("Wybierz '4', aby pokazać słownik")
-    print("Wybierz '5', aby zakończyć")
-
+while True :
+    print('     Wybierz 1 - aby dodać definicje')
+    print('     Wybierz 2 - aby wyszukac definicje')
+    print('     Wybierz 3 - aby usunąc definicje')
+    print('     Wybierz 4 - aby wyświetlić cały słownik')
+    print('     Wybierz 5 - aby zakończyć')
+    
     try:
-        num = int(input("Witaj, co chcesz zrobić: "))
-        
+        num = int(input('   Wybierz co chcesz zrobic? : '))
         if 1 <= num <= 5:
-            if num == 1:
-                title = input("Czego ma dotyczyć? : ")
-                definition = input("Podaj definicję: ") 
+            if num == 1 :
+                title = input('Podaj tytuł definicji : ')
+                definition = input('Podaj definicje : ')
                 definitions[title] = definition
-                print("Definicja dodana pomyślnie.")
-            elif num == 2:
-                title = input("Wyszukaj po ID: ")
+                print('Dodałeś definicje')
+            if num == 2 :
+                title = input('Podaj szukaną definicje : ')
                 if title in definitions:
-                    print(definitions[title])
-                else:
-                    print("Nie ma takiej definicji.")
-            elif num == 3:
-                title = input("Podaj ID, które chcesz usunąć: ")
+                     print(f'Definicja dla {title} to : {definitions[title]}')
+                else :
+                    print('Nie ma takiej definicji')
+            if num == 3 :
+                title = input('Podaj definicję do usunięcia')
                 if title in definitions:
-                    del definitions[title]
-                    print("Definicja usunięta pomyślnie.")
-                else:
-                    print("Nie ma takiej definicji.")
-            elif num == 4:
+                    del(definitions[title])
+                    print(f'Definicja {title} została usunięta')
+                else :
+                    print('Nie ma takiej definicji')
+            if num == 4 :
                 print(definitions)
-            elif num == 5:
-                print("Pa")
+            if num == 5 :
+                print('Do zobaczenia')
                 break
-        else:
-            print("Podaj poprawny kod menu.")
+        else :
+            print('Podaj liczbe z zakresu menu')
     except ValueError:
-        print("Błąd! Wprowadź poprawną wartość.")
+        print('Musisz podac liczbę')
