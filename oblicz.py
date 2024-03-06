@@ -1,15 +1,17 @@
 import figury
+from enum import IntEnum
 
-wybor = input("""Wybierz figure którą chcesz policzyć
+Menu_Figury = IntEnum('Menu_Figury', 'Kwadrat Prostokąt Trójkąt Trapez Koło')
+wybor = int(input("""Wybierz figure którą chcesz policzyć
 1.Kwadrat
 2.Prostokąt
 3.Trójkąt
 4.Trapez
 5.Koło
 
-Twój wybór : """)
+Twój wybór : """))
 
-if wybor == '1':
+if (wybor == Menu_Figury.Kwadrat):
     a = float(input("Podaj a : "))
     print(figury.pole_kwadratu(a))
               
