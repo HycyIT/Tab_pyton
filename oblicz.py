@@ -17,7 +17,7 @@ if (wybor == Menu_Figury.Kwadrat):
 elif wybor == Menu_Figury.Prostokąt:
     a = float(input("Podaj 'a': "))
     b = float(input("Podaj 'b': ")) 
-    print(figury.pole_prostokąta(a, b))
+    print(figury.pole_prostokata(a, b))
 elif wybor == Menu_Figury.Trójkąt:
     a = float(input("Podaj 'a': "))
     h = float(input("Podaj 'h': "))

@@ -2,7 +2,8 @@ import week
 
 from enum import IntEnum
 
-Menu_Week = IntEnum('Menu_Week', 'Poniedziałek Wtorek Środa Czwartek Piątek Sobota Niedziela')
+Menu_Week = IntEnum(
+    'Menu_Week', 'Poniedziałek Wtorek Środa Czwartek Piątek Sobota Niedziela')
 
 choose = int(input("""Wybierz numer tygodnia :
 
@@ -30,6 +31,3 @@ elif (choose == Menu_Week.Sobota):
     week.day_6()
 elif (choose == Menu_Week.Niedziela):
     week.day_7()
-    
-
-    
