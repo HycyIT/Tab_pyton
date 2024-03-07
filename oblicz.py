@@ -13,10 +13,10 @@ Twój wybór : """))
 
 if (wybor == Menu_Figury.Kwadrat):
     a = float(input("Podaj a : "))
-    print(figury.pole_kwadratu(a))        
+    print(figury.pole_kwadratu(a))
 elif wybor == Menu_Figury.Prostokąt:
     a = float(input("Podaj 'a': "))
-    b = float(input("Podaj 'b': ")) 
+    b = float(input("Podaj 'b': "))
     print(figury.pole_prostokata(a, b))
 elif wybor == Menu_Figury.Trójkąt:
     a = float(input("Podaj 'a': "))
