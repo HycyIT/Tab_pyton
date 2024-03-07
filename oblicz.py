@@ -13,21 +13,20 @@ Twój wybór : """))
 
 if (wybor == Menu_Figury.Kwadrat):
     a = float(input("Podaj a : "))
-    print(figury.pole_kwadratu(a))
-              
-elif wybor == '2':
+    print(figury.pole_kwadratu(a))        
+elif wybor == Menu_Figury.Prostokąt:
     a = float(input("Podaj 'a': "))
     b = float(input("Podaj 'b': ")) 
-    print(figury.pole_prostokąta(a,b))
-elif wybor == '3':
+    print(figury.pole_prostokąta(a, b))
+elif wybor == Menu_Figury.Trójkąt:
     a = float(input("Podaj 'a': "))
     h = float(input("Podaj 'h': "))
-    print(figury.pole_trojkata(a,h))
-elif wybor == '4':
+    print(figury.pole_trojkata(a, h))
+elif wybor == Menu_Figury.Trapez:
     a = float(input("Podaj 'a': "))
     b = float(input("Podaj 'b': "))
     h = float(input("Podaj 'h': "))
-    print(figury.pole_trapezu(a,b,h))
-elif wybor == '5':
+    print(figury.pole_trapezu(a, b, h))
+elif wybor == Menu_Figury.Koło:
     r = float(input("Podaj 'r': "))
     print(figury.pole_kola(r))
