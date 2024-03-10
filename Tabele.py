@@ -1,5 +1,7 @@
 accept_names = ['arkadiusz', 'wiola', 'antek', 'piotr', 'adam']
 
+print(accept_names[0:len(accept_names) - 1])
+
 
 def accept():
     names = input("Podaj imie : ").lower()
